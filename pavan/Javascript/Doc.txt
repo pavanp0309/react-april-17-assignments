@@ -1,0 +1,68 @@
+Variables : its nothing but container  which store different kinds datatypes 
+ datatypes :values -string ,boolean numbers arrays etc 
+
+Declaration :creation of Variables,function class  etc..
+ var a;
+ a: identifier :
+
+Rules For Writing/declaring the varaible/function Names (identifier)
+1.it shouldnot  contain special charater except $ and _
+2.it shouldnot start with numbers 
+3.it should not reserved keyword (function ,for ,var let const )
+4.it shouldnot white space (full name❌) -->full_name -->fullName 
+
+different ways Declare in js 
+1.use var keyword--->1995 
+2.use let keyword --->es6 (2015)
+3.use const keyword --->es6 (2015)
+4.without any keyword -->global
+
+
+REDEClARATION : creation of varaible with same Name with in the same scope ;
+var a;
+var a;
+INITIALAZATION : assiging a value at time of  creation/Declaration or after creation 
+
+scope: lifetime of varaible (accessibility of varaible) 
+ different types of scope : 
+    global scope : it accessible everywhere with in code 
+    local scope : 
+       block_scope : {}
+       function scope : function example(){}
+       module scope : the code in one file can accessble within other js files 
+
+
+HOISTING : moving all Declaration to top of there scope 
+hoisting is a behavior where declarations of variables and functions are moved to the top of their scope before the code is executed.
+
+
+Temporal Dead Zone:
+This is the period from the start of a scope until the let or const declaration is reached during execution. In the TDZ, you cannot access the variable, even though it's "known" to exist by the JavaScript engine. 
+
+Modules :
+ 
+ Types of modules :
+        common js module :  (before ) 
+             require("module-library/name") //eg : react redux bootstrap-icons fonts   //using the code
+             exports.filename/module //sharing the code 
+        Esm : 
+            import  module from "module-library"  // using the code 
+            export modulename  //sharing the code  
+
+
+            Types of Exports and Imports 
+              Types of Exports 
+                Named export : we need to give the same function varaible ,object etc  where ever using(importing) it
+                         named export can n for a file  
+
+                         ex: export var a=10
+                         ex: export var b=10
+
+                 default exports : we can  import with any name  
+                                default export should one for file 
+                           ex: export default var c=20
+                  Types of Imports 
+                     Named imports  : we need to import with same name
+                      import {a,b} from "./filename"
+                     default Imports : we can import with any name 
+                      import cvalue from "./filename"
