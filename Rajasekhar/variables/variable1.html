@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2> variables in js</h2>
+    <script>
+
+// var is hoisted — but not its value.
+
+console.log(a); // undefined (not error!)
+var a = 10;
+
+//let and const are hoisted but in temporal dead zone (tdz)
+
+// console.log(b)
+// let b=20;
+
+// console.log(c)
+// const c=30;
+
+//2.Scope
+//var is function scoped
+function example(){
+    if(true){
+        var msg="hi hello ";
+    }
+    console.log(msg);
+}
+example();
+
+//let and const are block-scoped
+
+function raja(){
+    if(true){
+        let a1=10;
+        const a2=20;
+    }
+    console.log(a1);
+    console.log(a2);
+}
+// raja()
+
+//3.Temporal dead zone(tdz)
+function test(){
+    // consol.log(n1);
+    console.log(n2);
+    console.log(n3);
+
+    var n1=5;
+    let n2=55;
+    const n3=555;  
+}
+//test();
+
+    </script>
+</body>
+</html>
